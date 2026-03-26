@@ -60,5 +60,21 @@ button.addEventListener("click", function increase() {counter++;
     })
 
 </script>
+<p id="text">Waiting...</p>
+
+<script>
+  setTimeout(function() {
+    document.getElementById("text").textContent = "Time's up!";
+  }, 5000);
+</script>
+<!--stop link from navigating-->
+<a href="https://google.com" id="link">Click me</a>
+
+<script>
+  document.getElementById("link").addEventListener("click", function(e) {
+    e.preventDefault();
+    console.log("Link stopped!");
+  });
+</script>
 </body>
 </html>
