@@ -9,7 +9,7 @@
         <h1>Student Profile</h1>
     </header>
     <section>
-        <img src="https://via.placeholder.com/150" alt="Profile Picture">
+        <img src="Pictures/smiling-young-man-glasses_1308-174702.jpg" alt="Profile Picture">
         <table border="1">
             <tr>
                 <th>Name</th>
@@ -20,12 +20,37 @@
                 <td>John Doe</td>
                 <td>21</td>
                 <td>Computer Science</td>
+                <!--New table rows-->
+            <tr>
+                <td>Ini</td>
+                <td>56</td>
+                <td>Computer Engineering</td>
+            </tr>
+            <tr>
+                <td>Golden</td>
+                <td>20</td>
+                <td>Biology</td>
+            </tr>
+            <tr>
+                <td>Prosper</td>
+                <td>35</td>
+                <td>Economics</td>
+            </tr>
             </tr>
         </table>
     </section>
     <form>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name"><br>
+        <input type="submit" value="Submit">
+
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender">Male
+        <input type="radio" name="gender">Female<br>
+        <label for="newslaterpref" >Subscribe To Newsletter</label>
+        <input type="checkbox" id="newslaterpref" name="newslaterpref"><br>
+        <label for="comments" >Comments:</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br>
         <input type="submit" value="Submit">
     </form>
 </body>
