@@ -11,6 +11,66 @@
         function changeTitle() {
             document.getElementById("title").innerHTML = "New Title!";
         }
+        document.addEventListener("DOMContentLoaded", function() {
+    changetextcolour();
+});
+        function changetextcolour() {
+            document.getElementById("add_colour").style.color = "deeppink";
+        }
+        changetextcolour();
+        
     </script>
+    <p id="add_colour">Path dream paper earth run sky, slow flower eat rest. Furniture small, room pencil think open pear tea, watch sweet star read mirror phone! Grape house, path fly eat clean laugh coffee phone mirror? Dream big weather long apple, hide fly cloud. Old fly pear slow wall rest, light bird. Draw mountain high new mirror understand, wind tea read, sugar sand long walk fresh? Draw sweet flower dream rest rain? Tea water hide sand forest!</p>
+
+    <ul id="myList">
+        <li>Frist item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+
+    </ul>
+    <script>
+        let list = ["Fourth item", "Fifth item", "Sixth item"];
+        let ul = document.getElementById("myList");
+        list.forEach(function(item) {
+    let li = document.createElement("li"); // creates <li>
+    li.textContent = item;                 // thsi seets the text content of the <li> to the item
+    ul.appendChild(li);                    // add items to unordered list
+});
+    </script>
+    <!--Toggle button to hide/display element-->
+    
+<p class="box">Toggle</p>
+<button onclick="toggle()">Toggle Button</button>
+<script>
+    function toggle() {
+        let box = document.querySelector(".box");
+        if (box.style.display === "none") {
+            box.style.display = "block";
+        } else {
+            box.style.display = "none";
+        }
+    }
+</script>
+
+
+
+<!--new form for input extraction-->
+<form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    <button type="button" onclick="getInput()">Submit</button>
+</form>
+    <div id="output"></div >
+<script>
+    function getInput() {
+        let value = document.getElementById("name").value;
+    let output = document.getElementById("output");
+
+    // append text
+    output.innerHTML = value;
+    }
+    getInput()
+</script>
+
 </body>
 </html>

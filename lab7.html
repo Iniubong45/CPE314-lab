@@ -16,5 +16,49 @@
             console.log("Key pressed: " + event.key);
         });
     </script>
+    <div id="box">Hover over me</div>
+
+<script>
+const box = document.getElementById("box");
+
+box.addEventListener("mouseover", function () {
+    box.style.backgroundColor = "deeppink";
+});
+</script>
+
+<!--increment counter-->
+<p id="count">0</p>
+
+<script>
+let counter = 0;
+
+const button = document.getElementById("btn");
+const display = document.getElementById("count");
+
+button.addEventListener("click", function increase() {counter++;
+    document.getElementById("count").innerHTML = counter;})
+</script>
+<form id="form">
+    <label for="Email">Email:</label>
+    <input type="text" id="email">
+    <button type="submit">submit</button>
+</form>    
+<script>
+    let email = document.getElementById("email");
+    let form = document.getElementById("form");
+    form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    if (email.value.includes("@")) {
+        alert("Valid Email!");
+    } else {
+        alert("Invalid Email! Please try again.");
+        email.value = "";
+        };
+        
+
+    })
+
+</script>
 </body>
 </html>
