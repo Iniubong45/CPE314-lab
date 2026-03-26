@@ -1,16 +1,92 @@
 .container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: space-around;
-}
+    color: rgb(255, 255, 255);
+    
 
+}
 .item {
-    background-color: lightblue;
-    padding: 20px;
-    margin: 10px;
+    margin: 50px;
+    background-color: rgb(7, 90, 117);
+    padding: 40px;
+    
+    
+    
+}
+.item:hover {
+    background-color: rgb(28, 86, 9);
+    cursor: pointer;
+    color: white;
 }
 
 @media (max-width: 600px) {
     .container {
         flex-direction: column;
     }
+}
+body {
+    margin: 30;
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* pushes logo left, links right */
+    align-items: center;            /* vertically centers items */
+    background-color: #3d0c0c;
+    padding: 15px 30px;
+}
+
+.logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Make links horizontal */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.nav-links li a:hover {
+    color: lightcoral;
+}
+
+.nav-links li a:hover {
+    background-color: orange;
+    color: black;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.navbar {
+    position: sticky;
+}
+@media (max-width: 600px) {
+    body {
+        background-color: black;
+        color: white;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+    .nav-links li a {
+    color: rgb(34, 99, 160);
+    text-decoration: none;
+    transition: color 0.2222s ease-in-out;
+}
+
 }
