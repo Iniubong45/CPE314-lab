@@ -3,10 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>CSS Basics</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Linking external css file-->
+    <link rel="stylesheet" href="lab3-styles.css">
+    <style>
+        /* Internal CSS to edit heading*/
+        h1{
+            text-decoration: underline ;
+            font-style: italic;
+        }
+        .box {
+            color: rgb(216, 210, 210);
+            padding: 30px;
+            border: 10px solid rgb(216, 210, 210);
+            margin: 40px;
+        }
+        body {
+  background: linear-gradient(to right, blue, purple);
+}
+    </style>
 </head>
 <body>
-    <h1 style="color: blue;">Styled Heading</h1>
-    <p>This paragraph uses external CSS.</p>
+    <h1 style="color: rgb(209, 219, 218);">Heading with style</h1>
+    <div class="box">Div element inserted and styled using internal CSS.</div>
 </body>
 </html>
